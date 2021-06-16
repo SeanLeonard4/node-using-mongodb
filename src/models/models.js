@@ -1,4 +1,6 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
+
+const Schema = mongoose.Schema;
 
 export const ProductSchema = new Schema({
     name: {
@@ -10,13 +12,13 @@ export const ProductSchema = new Schema({
         required: 'Enter a description'
     },
     category: {
-        type: String,
+        type: String
     },
     price: {
-        type: Number,
+        type: Number
     },
     created_date: {
         type: Date,
         default: Date.now
-    },
-})
+    }
+});

@@ -1,7 +1,7 @@
-import  Mongoose  from "mongoose";
+import  mongoose  from "mongoose";
 import { ProductSchema } from "../models/models";
 
-const Product = Mongoose.model('Product', ProductSchema);
+const Product = mongoose.model('Product', ProductSchema);
 
 export const addnewProduct = (req, res) =>{
     let newProduct = new Product(req.body);
@@ -11,7 +11,5 @@ export const addnewProduct = (req, res) =>{
             res.send(err);
         }
         res.json(Product);
-    })
+    });
 }
-
-
