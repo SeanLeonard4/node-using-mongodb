@@ -13,7 +13,7 @@ describe('Updating a product', () => {
 
     })
 
-    it('Add a controler to update a product @route-update', (done) => {
+    it('Add a route to update a product @route-update', (done) => {
         try {
             expect(fs.readFileSync('src/routes/routes.js').toString())
             .to.contain(".put(updateProduct)")
